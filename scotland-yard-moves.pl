@@ -1,4 +1,4 @@
-:- module(scotland-yard-moves,[scotlandYardMoveBi/3, scotlandYardMove/3]).
+:- module(scotlandyardmoves,[scotlandYardMoveBi/3, scotlandYardMove/3]).
 
 %! scotlandYardMoveBi(?From:int, ?To:int, ?Using:atom) is nondet
 scotlandYardMoveBi(From,To,Using) :-
@@ -6,6 +6,8 @@ scotlandYardMoveBi(From,To,Using) :-
 %! scotlandYardMoveBi(?From:int, ?To:int, ?Using:atom) is nondet
 scotlandYardMoveBi(From,To,Using) :-
     scotlandYardMove(To,From,Using).
+
+% all scotlandYardMove must be of the form scotlandYardMove(X,Y,Z) where X < Y. to achive bidiractional relations see scotlandYardMoveBi
 
 %! scotlandYardMove(?From:int, ?To:int, ?Using:atom) is nondet
 scotlandYardMove(1,8,cab).
